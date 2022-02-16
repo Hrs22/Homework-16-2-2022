@@ -2,11 +2,13 @@
 {
     public partial class Form1 : Form
     {
+
         public Form1()
         {
             InitializeComponent();
         }
-
+        private Form2 form2;
+        private Form3 form3;
         private void Form1_Load(object sender, EventArgs e)
         {
 
@@ -17,19 +19,7 @@
 
         }
 
-        private void checkBox11_CheckedChanged(object sender, EventArgs e)
-        {
-            if (!checkBox11.ThreeState)
-            {
-                checkBox11.ThreeState = true;
-                checkBox11.CheckAlign = ContentAlignment.MiddleRight;
-            }
-            else
-            {
-                checkBox11.ThreeState = false;
-                checkBox11.CheckAlign = ContentAlignment.MiddleLeft;
-            }
-        }
+
           
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
@@ -47,33 +37,6 @@
             }
         }
 
-        private void checkBox2_CheckedChanged(object sender, EventArgs e)
-        {
-            if (!checkBox2.ThreeState)
-            {
-                checkBox2.ThreeState = true;
-                checkBox2.CheckAlign = ContentAlignment.MiddleRight;
-            }
-            else
-            {
-                checkBox2.ThreeState = false;
-                checkBox2.CheckAlign = ContentAlignment.MiddleLeft;
-            }
-        }
-
-        private void checkBox3_CheckedChanged(object sender, EventArgs e)
-        {
-            if (!checkBox3.ThreeState)
-            {
-                checkBox3.ThreeState = true;
-                checkBox3.CheckAlign = ContentAlignment.MiddleRight;
-            }
-            else
-            {
-                checkBox3.ThreeState = false;
-                checkBox3.CheckAlign = ContentAlignment.MiddleLeft;
-            }
-        }
 
         private void checkBox4_CheckedChanged(object sender, EventArgs e)
         {
@@ -89,20 +52,6 @@
             }
         }
 
-        private void checkBox5_CheckedChanged(object sender, EventArgs e)
-        {
-            if (!checkBox5.ThreeState)
-            {
-                checkBox5.ThreeState = true;
-                checkBox5.CheckAlign = ContentAlignment.MiddleRight;
-            }
-            else
-            {
-                checkBox5.ThreeState = false;
-                checkBox5.CheckAlign = ContentAlignment.MiddleLeft;
-            }
-        }
-
         private void checkBox6_CheckedChanged(object sender, EventArgs e)
         {
             if (!checkBox6.ThreeState)
@@ -114,34 +63,6 @@
             {
                 checkBox6.ThreeState = false;
                 checkBox6.CheckAlign = ContentAlignment.MiddleLeft;
-            }
-        }
-
-        private void checkBox7_CheckedChanged(object sender, EventArgs e)
-        {
-            if (!checkBox7.ThreeState)
-            {
-                checkBox7.ThreeState = true;
-                checkBox7.CheckAlign = ContentAlignment.MiddleRight;
-            }
-            else
-            {
-                checkBox7.ThreeState = false;
-                checkBox7.CheckAlign = ContentAlignment.MiddleLeft;
-            }
-        }
-
-        private void checkBox8_CheckedChanged(object sender, EventArgs e)
-        {
-            if (!checkBox8.ThreeState)
-            {
-                checkBox8.ThreeState = true;
-                checkBox8.CheckAlign = ContentAlignment.MiddleRight;
-            }
-            else
-            {
-                checkBox8.ThreeState = false;
-                checkBox8.CheckAlign = ContentAlignment.MiddleLeft;
             }
         }
 
@@ -199,60 +120,86 @@
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (checkBox1.Checked == false && checkBox2.Checked == false && checkBox3.Checked == false && checkBox4.Checked == false && checkBox5.Checked == false &&
-               checkBox6.Checked == false && checkBox7.Checked == false && checkBox8.Checked == false && checkBox9.Checked == false && checkBox10.Checked == false &&
-               checkBox11.Checked == false && checkBox12.Checked == false)
-            {
-                MessageBox.Show("Избери категория !");
-            }
+
             if (checkBox1.Checked == true)
             {
                 MessageBox.Show("Започваш категория АМ !");
             }
-            else if (checkBox2.Checked == true)
+            if (checkBox1.Checked == true)
             {
-                MessageBox.Show("Започваш категория А1 !");
+                Form2 f2 = new Form2();
+                f2.ShowDialog();
             }
-            else if (checkBox3.Checked == true)
-            {
-                MessageBox.Show("Започваш категория А2 !");
-            }
-            else if (checkBox4.Checked == true)
+
+
+             if (checkBox4.Checked == true)
             {
                 MessageBox.Show("Започваш категория А !");
             }
-            else if (checkBox5.Checked == true)
+            if (checkBox4.Checked == true)
             {
-                MessageBox.Show("Започваш категория B1 !");
+                Form3 f3 = new Form3();
+                f3.ShowDialog();
+                f3.Close();
             }
-            else if (checkBox6.Checked == true)
+
+
+             if (checkBox6.Checked == true)
             {
                 MessageBox.Show("Започваш категория B !");
             }
-            else if (checkBox7.Checked == true)
+            if (checkBox6.Checked == true)
             {
-                MessageBox.Show("Започваш категория BE !");
+                Form4 f4 = new Form4();
+                f4.ShowDialog();
+                f4.Close();
             }
-            else if (checkBox8.Checked == true)
-            {
-                MessageBox.Show("Започваш категория C1 !");
-            }
-            else if (checkBox9.Checked == true)
+
+
+            if (checkBox9.Checked == true)
             {
                 MessageBox.Show("Започваш категория C !");
             }
-            else if (checkBox10.Checked == true)
+            if (checkBox9.Checked == true)
+            {
+                Form5 f5 = new Form5();
+                    f5.ShowDialog();
+                f5.Close();
+            }
+
+
+            if (checkBox10.Checked == true)
             {
                 MessageBox.Show("Започваш категория D !");
             }
-            else if (checkBox11.Checked == true)
+            if (checkBox10.Checked == true)
             {
-                MessageBox.Show("Започваш категория DE !");
+                Form6 f6 = new Form6();
+                f6.ShowDialog();
+                f6.Close();
             }
-            else if (checkBox12.Checked == true)
+
+
+            if (checkBox12.Checked == true)
             {
-                MessageBox.Show("Започваш категория T !");
+                MessageBox.Show("Започваш категория F !");
             }
+            if (checkBox12.Checked == true)
+            {
+                Form7 f7 = new Form7();
+                f7.ShowDialog();
+                f7.Close();
+            }
+        }
+
+        private Form2 CreateForm2()
+        {
+            throw new NotImplementedException();
+        }
+
+        private void buttonThatOpenForm2()
+        {
+            throw new NotImplementedException();
         }
 
         private void pictureBox1_Click_1(object sender, EventArgs e)
